@@ -1,1 +1,32 @@
+// java program to swap two numbers
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        int t;
+        int x = 100;
+        int y = 200;
+         
+        //Swapping in steps
+        t = x;
+        x = y;
+        y = temp;
+        System.out.println("x = " + x + " and y = " + y);
+    }
+}
 
+//java program swap two numbers without third variable
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        int x = 100;
+        int y = 200;
+ 
+        //Swapping in steps
+        x = x + y;      //x = 100 + 200 = 300
+        y = x - y;      //y = 300 - 200 = 100
+        x = x - y;      //x = 300 - 100 = 200
+        System.out.println("x = " + x + " and y = " + y);
+    }
+}
