@@ -1,28 +1,272 @@
 */
-1.	Write a program in JAVA to perform the following operation:
+1.Write a program in JAVA to perform the following operation:
 If a number is divisible by 3 it should print “Consultadd” as a string
 If a number is divisible by 5 it should print “JAVA Training” as a string
 If a number is divisible by both 3 and 5 it should print “Consultadd JAVA Training” as a string.
 
-public class didvisible 
-{
-     public static void main(String[] args) 
-{
+import java.util.Scanner;
 
-     Scanner in=new Scanner(System.in);
-     int i= in.nextInt();
-     if(i%3==0)
-{
-     System.out.println("consultadd");
-}
-     if(i%5==0)
-{
-     System.out.println("Java training");
-}
-     if (i%3==0 && i%5==0)
-{
-     System.out.println("Consulta add Java training");
-}
-}
+public class Divisible {
+    public static void main(String[] args)
+    {
+
+        Scanner in=new Scanner(System.in);
+        int i= in.nextInt();
+        if(i%3==0)
+        {
+            System.out.println("consultadd");
+        }
+        if(i%5==0)
+        {
+            System.out.println("Java training");
+        }
+        if (i%3==0 && i%5==0)
+        {
+            System.out.println("Consultadd Java training");
+        }
+    }
 }
 
+Q2.
+
+import java.util.Scanner;
+
+public class Mathoperations {
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter two values");
+        double num1 = in.nextDouble();
+        double num2 = in.nextDouble();
+
+        double result = 0;
+
+        System.out.println("choose the option");
+        char p = in.next().charAt(0);
+        switch (p)
+        {
+            case 1:
+            {
+                result = num1 + num2;
+                System.out.println(result);
+            }
+            break;
+            case 2:
+            {
+                result = num1 - num2;
+                System.out.println(result);
+            }
+            break;
+            case 3:
+            {
+                result = num1 / num2;
+                System.out.println(result);
+            }
+            break;
+            case 4:
+            {
+                result = num1 * num2;
+                System.out.println(result);
+            }
+            break;
+            case 5:
+            {
+                result = (num1 + num2) / 2;
+                System.out.println(result);
+            }
+            break;
+        }
+        if (result < 0)
+        {
+            System.out.println("oops option:" + p + "is returning negative number");
+        }
+    }
+}
+
+
+
+
+Q3. 
+
+
+public class Flowchart {
+    public static void main(String[] args) {
+        int a=10;
+        int b=20;
+        int c=30;
+        int avg=(a+b+c)/3;
+        System.out.println("avg="+avg);
+        if((avg > a) && (avg > b) && (avg > c) || avg > a && avg > b)
+        {
+            System.out.println("Avg is Higher than a,b,c");
+        }
+        else if(avg>a &&avg>c)
+        {
+            System.out.println("Avg is Higher than a,c");
+        }
+        else if(avg>b&& avg>c)
+        {
+            System.out.println("Avg is Higher than a,b");
+        }
+        else if(avg>a)
+        {
+            System.out.println("Avg is just Higher than a");
+        }
+        else if(avg>b)
+        {
+            System.out.println("Avg is just Higher than b");
+        }
+        else if(avg>c)
+        {
+            System.out.println("Avg is just Higher than b");
+        }
+    }
+}
+
+
+Q4.Write a program in JAVA to break and continue if the following cases occurs:
+• If user enters a negative number just break the loop and print “It’s Over”
+• If user enters a positive number just continue in the loop and print “Good Going”
+import java.util.Scanner;
+
+public class Breakcontinuetask
+{
+    public static void main(String[] args)
+    {
+        int number;
+        Scanner in = new Scanner(System.in);
+        boolean p = true;
+        while (p)
+        {
+            number = in.nextInt();
+            if (number < 0)
+            {
+                System.out.println(" Its over");
+                break;
+            } else
+                {
+                System.out.println("Good Going");
+            }
+        }
+    }
+}
+
+
+Q5. Write a program that prints all the numbers from 0 to 6 except 3 and 6.
+    Expected output: 0 1 2 4 5
+    
+    
+    public class Not3and6 
+{
+    public static void main(String[] args) 
+  {
+
+
+        int i;
+        for (i = 0; i < 6; i++) 
+        {
+            if (i == 3 | i == 6)
+                continue;
+            System.out.println(i);
+
+        }
+    }
+}
+
+
+Q6.
+
+
+public class OldNew
+{
+    public static void main(String[] args)
+    {
+
+        int i = 40;
+        if (i % 2 != 0)
+        {
+            System.out.println("NEW");
+        }
+        else if (i % 2 == 0 && (i > 2 && i < 5))
+        {
+            System.out.println("OLD");
+        }
+        else if (i % 2 == 0 && (i > 6 && i < 30))
+        {
+            System.out.println("NEW");
+        }
+        else if (i % 2 == 0 && i > 30)
+        {
+            System.out.println("OLD");
+        }
+        else
+            {
+            System.out.println("WEIRD");
+        }
+    }
+}
+
+Q7.Write a Java program that reads a floating-point number and prints "zero" if the
+number is zero. Otherwise, print "positive" or "negative". Add "small" if the absolute
+value of the number is less than 1, or "large" if it exceeds 1,000,000.
+
+
+import java.util.Scanner;
+
+public class Question_seven 
+{
+    public static void main(String[] args) 
+  {
+
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter floating point number");
+
+        float p = in.nextFloat();
+        if (p == 0)
+        {
+            System.out.println("zero");
+        } else
+            {
+            if (p > 0)
+            {
+
+                System.out.println("positive");
+            } else
+                {
+                System.out.println("negative");
+            }
+
+        }
+        if (Math.abs(p) < 1 || Math.abs(p) > 1000000) 
+        {
+            System.out.println("small");
+        }
+    }
+
+}
+
+
+Q8.Write a JAVA program which takes character input from the user,
+• If the character is from r, a, n, d, o, m (consider both upper and lowercases), then print FOUND.
+• Print NOT FOUND for all the other alphabets.
+
+import java.util.Scanner;
+
+public class Found_notFound
+{
+    public static void main(String[] args) {
+
+
+        System.out.println("Enter character: ");
+        Scanner in = new Scanner(System.in);
+        char ch = in.next().charAt(0);
+        char r = 'r', a = 'a', n = 'n', d = 'd', o = 'o', m = 'm';
+        char R = 'R', A = 'A', N = 'N', D = 'D', O = 'O', M = 'M';
+        if (ch == r || ch == a || ch == n || ch == d || ch == o || ch == m || ch == R || ch == A || ch == N || ch == D || ch == O || ch == M) {
+            System.out.println("FOUND");
+        } else {
+            System.out.println("NOT FOUND");
+        }
+    }
+}
