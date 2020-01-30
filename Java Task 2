@@ -1,1 +1,28 @@
+*/
+1.	Write a program in JAVA to perform the following operation:
+If a number is divisible by 3 it should print “Consultadd” as a string
+If a number is divisible by 5 it should print “JAVA Training” as a string
+If a number is divisible by both 3 and 5 it should print “Consultadd JAVA Training” as a string.
+
+public class didvisible 
+{
+     public static void main(String[] args) 
+{
+
+     Scanner in=new Scanner(System.in);
+     int i= in.nextInt();
+     if(i%3==0)
+{
+     System.out.println("consultadd");
+}
+     if(i%5==0)
+{
+     System.out.println("Java training");
+}
+     if (i%3==0 && i%5==0)
+{
+     System.out.println("Consulta add Java training");
+}
+}
+}
 
