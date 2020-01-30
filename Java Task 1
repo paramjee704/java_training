@@ -33,20 +33,24 @@ public class Main
 
 1.2 // Write a program to print the value given by the user.
 
-class GetInput
-{
-   public static void main(String args[])
-   {
-      String s;
-      Scanner obj = new Scanner(System.in);           /* create a object */ 
-      
-      System.out.println("Enter a string:");
-      
-      s = obj.nextLine();                             /* Take string input and assign to variable */      
-      
-      System.out.println("You entered string "+s);    /* Print */
-   }
-}   
+import java.util.Scanner;
+
+public class Getinput {
+    public static void main(String args[])
+    {
+        String s;
+        Scanner obj = new Scanner(System.in);           /* create a object */
+
+        System.out.println("Enter a string:");
+
+        s = obj.nextLine();                             /* Take string input and assign to variable */
+
+        System.out.println("You entered string "+s);    /* Print */
+    }
+
+
+}
+  
 
 1.3 //Write a program to complete the task given below:
 Ask the user to enter any 2 numbers in between 1-10 and add both of them to another variable call z.
@@ -54,24 +58,25 @@ Use z for adding 30 into it and print the final result by using variable results
 
 
 
-class AddNumbers
-{
-   public static void main(String args[])
-   {
-      int x, y, z;
+import java.util.Scanner;
 
-      System.out.println("Enter two integers and add their sum");
-      Scanner in = new Scanner(System.in);
-     
-      x = in.nextInt();
-      y = in.nextInt();
-      z = x + y;
-     
-      System.out.println("Sum of the integers = " + z);
-      
-      int result= z + 30;
-      System.out.println("Final result:" + result);
-   }
+public class Addnumbers {
+    public static void main(String args[])
+    {
+        int x, y, z;
+
+        System.out.println("Enter two integers and add their sum");
+        Scanner in = new Scanner(System.in);
+
+        x = in.nextInt();
+        y = in.nextInt();
+        z = x + y;
+
+        System.out.println("Sum of the integers = " + z);
+
+        int result= z + 30;
+        System.out.println("Final result:" + result);
+    }
 }
-   
+
    
