@@ -10,7 +10,7 @@ public class Main
         //Swapping in steps
         t = x;
         x = y;
-        y = temp;
+        y = t;
         System.out.println("x = " + x + " and y = " + y);
     }
 }
