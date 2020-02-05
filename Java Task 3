@@ -1,1 +1,88 @@
+Q1. Write a simple program to print multiplication table of a certain number taken from user.
 
+import java.util.Scanner;
+
+public class Task3LoopStat
+{
+    public static void main(String[] args)
+    {
+
+        Scanner in = new Scanner(System.in);
+        int num = 0, i, table;
+        System.out.println("Enter number");
+        num = in.nextInt();
+        for (i = 1; i <= 10; i++)
+        {
+            table = num * i;
+            System.out.println(num + " * " + i + "= " + table);
+        }
+    }
+}
+
+
+Q2.Write a program in which:
+Take 10 values input from user using loop.
+Print sum of all the numbers provided
+Print the Average of those 10 values
+
+
+import java.util.Scanner;
+
+public class Task3question2
+{
+    public static void main(String[] args)
+    {
+
+        Scanner in = new Scanner(System.in);
+        int val, i, sum = 0;
+        float Avg = 0;
+        System.out.println("Enter Ten numbers");
+        for (i = 1; i <= 10; i++)
+        {
+            val = in.nextInt();
+            sum = sum + val;
+            Avg = (float) sum / 10;
+        }
+
+        System.out.println("Sum of Ten numbers: " + sum);
+        System.out.println("Average of Ten numbers: " + Avg);
+    }
+}
+
+
+Q3.Write a JAVA program that takes user input from 1 to 12 for months, and display number of days of a particular month. 
+(Shows “Invalid Details“ if incorrect month number will be provided).
+
+
+import java.util.Scanner;
+
+public class Task3monthdetails
+{
+
+    public static void main(String[] args)
+    {
+        System.out.println("Enter Month: ");
+        Scanner in = new Scanner(System.in);
+        int Month = in.nextInt();
+
+        switch(Month)
+        {
+            case 1:case 3:case 5: case 7:case 8: case 10: case 12:
+            System.out.println("Total days are 31.");
+            break;
+            case 2:
+                System.out.println("Total days in a month is 29.");
+                break;
+            case 4:case 6: case 9: case 11:
+            System.out.println("Total days are 30.");
+            break;
+            default:
+                System.out.println("Invalid Details.");
+        }
+
+
+    }
+}
+
+
+Q4.
