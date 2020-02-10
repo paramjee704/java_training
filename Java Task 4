@@ -1,0 +1,95 @@
+Q1.Write a JAVA program that takes given String of words and return the length of the shortest word.
+
+
+import java.util.Scanner;
+
+public class Task4wordlength {
+    public static void main(String[] args) {
+        String s = "My name is Param";
+        int len = s.length();
+        String shortest = "", word = "";
+        String words[] = new String[100];
+        int i, length = 0;
+        for (i = 0; i < len; i++) 
+        {
+            if (s.charAt(i) != ' ') 
+            {
+                word += s.charAt(i);
+                
+            } else {
+                words[length] = word;
+                length++;
+                word = "";
+            }
+            shortest = words[0];
+        }
+        for (i = 0; i < length; i++) 
+        {
+            System.out.println(shortest.length() + " : " + words[i].length());
+            if (shortest.length() > words[i].length()) 
+            {
+                shortest = words[i];
+            }
+        }
+        System.out.println("Shortest value: " + shortest);
+
+
+    }
+
+}
+
+
+
+Q2.Write a JAVA program that gives sum of all the values of array except the highest and lowest values.
+
+public class Task4sumofArrayexceptminmax
+{
+    public static void main(String[] args)
+    {
+        int num[] = { 1, 2, 3, 4, 5 };
+        int sum = 0, n;
+        int min = num[0];
+        int max = num[0];
+        for (n = 0; n < num.length; n++) 
+        {
+
+            if (num[n] < min)
+            {
+                min = num[n];
+
+            } 
+            else if (num[n] > max)
+            {
+                max = num[n];
+            }
+            sum = sum + num[n];
+
+        }
+        sum = sum - (max + min);
+        System.out.println("Min: " + min + " Max: " + max);
+        System.out.println("Sum:" + sum);
+    }
+}
+
+
+Q3. Write a JAVA method to remove all the spaces from the String and return the resultant.
+
+
+
+public class Task4Replaceblankspave
+{
+    public static void main(String[] args)
+    {
+        String str = "Hello My Name is Param ";
+
+        // Call the replaceAll() method
+        str = str.replaceAll("\\s", "");
+
+        System.out.println(str);
+    }
+}
+
+
+Q4.
+
+
