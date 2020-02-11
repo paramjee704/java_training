@@ -90,6 +90,121 @@ public class Task4Replaceblankspave
 }
 
 
-Q4.
+Q4.Write a JAVA method to return a boolean true if the string doesn’t have repeating letters and consecutive or nonconsecutive i.e. all the letters of the string be unique (isogram) else false.
+   Write a JAVA program that reverse the words of a sentence.
+   For eg, => “Be Happy and Stay Motivated” => “eB yppah dna yatS detavitoM”. 
+   
+   
+   
+   
+   
+   public class Task4stringrepeatreverse {
+    public static void main(String[] args)
+    {
+    String str = "Be Happy and Stay Motivated";
+    int i, p, n = 0;
+    String words[] = str.split(" ");
+    String revStr = "";
+    char ch[] = str.toCharArray();
+
+		for (i = 0; i < ch.length; i++)
+		{
+        for (p = 0; p < ch.length; p++)
+        {
+            if (ch[i] == ch[p] && i != p)
+            {
+                n = 1;
+            }
+        }
+    }
+		if (n == 1)
+            System.out.println(true);
+		else
+                System.out.println(false);
+
+		for (i = 0; i < words.length; i++)
+		{
+        String word = words[i];
+        String reverse = "";
+        for (p = word.length() - 1; p >= 0; p--)
+        {
+            reverse = reverse + word.charAt(p);
+
+        }
+        revStr = revStr + reverse + " ";
+    }
+
+		System.out.println(revStr);
+
+    }
+}
+
+
+Q5.Write a JAVA program that takes out the even from the odds and odd from the list of even numbers,
+For eg, => {23,25,75,87,47,1,91,51,2} //Output for this case =>2
+=> {22,44,64,76,98,12,43,54,90} // Output for this case =>43.
+
+
+public class Task4evenoddviceversa
+{
+    public static void main(String[] args)
+    {
+        int a[]={1,2,5,6,3,2};
+        
+        System.out.println("Odd Numbers:");
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i] % 2!= 0)
+            {
+                System.out.println(a[i]);
+            }
+        }
+        System.out.println("Even Numbers:");
+        for(int i=0;i<a.length;i++)
+        {
+            if (a[i] % 2 == 0)
+            {
+                System.out.println(a[i]);
+            }
+        }
+    }
+}
+
+
+Q6.Write a JAVA program that swaps the case of the alphabets of the string,
+   For eg,  => “heLLo WOrLd” => “HEllO woRlD”.
+   
+   
+import java.util.Scanner;
+
+public class Task4lowertoupperviceversa
+{
+    public static void main(String[] args)
+    {
+        String str="HEllO woRlD";
+        StringBuffer newStr=new StringBuffer(str);
+
+        for(int i = 0; i < str.length(); i++) {
+
+            //Checks for lower case character
+            if(Character.isLowerCase(str.charAt(i))) 
+            {
+                //Convert it into upper case using toUpperCase() function
+                newStr.setCharAt(i, Character.toUpperCase(str.charAt(i)));
+            }
+            //Checks for upper case character
+            else if(Character.isUpperCase(str.charAt(i))) 
+            {
+                //Convert it into upper case using toLowerCase() function
+                newStr.setCharAt(i, Character.toLowerCase(str.charAt(i)));
+            }
+        }
+        System.out.println("String after conversion : " + newStr);
+    }
+}
+
+
+Q7.
+
 
 
