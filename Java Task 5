@@ -1,0 +1,206 @@
+Q1.Print the sum, difference and product of two complex numbers by creating a class named 'Complex' with separate methods for 
+each operation whose real and imaginary parts are entered by user.
+
+class Complex
+{
+    double real;
+    static double imag;
+    public Complex(double real, double imag)
+    {
+        this.real = real;
+        this.imag = imag;
+    }
+    public static void main(String[] args)
+    {
+        Complex n1 = new Complex(2.3, 4.5),
+                n2 = new Complex(3.4, 5.0),
+                total, diff;
+        total = add(n1, n2);
+        diff = sub(n1,n2);
+        System.out.printf("Sum = %.1f + %.1fi", total.real, total.imag);
+        System.out.printf("Diff = %.1f - %.1fi", diff.real, diff.imag);
+
+    }
+    public static Complex add(Complex n1, Complex n2)
+    {
+        Complex total = new Complex(0.0, 0.0);
+        total.real = n1.real + n2.real;
+        total.imag = n1.imag + n2.imag;
+        return(total);
+    }
+
+    public static Complex sub(Complex n1, Complex n2) {
+
+        {
+            Complex diff = new Complex(0.0, 0.0);
+            diff.real = n1.real - n2.real;
+            diff.imag = n1.imag - n2.imag;
+            return (diff);
+        }
+
+
+    }
+
+}
+
+
+
+
+Q2.Employee Table
+
+
+
+class Employee
+{
+    int year;
+    String name, address;
+
+    public Employee(String name, int year, String address)
+    {
+        this.name= name;
+        this.year= year;
+        this.address= address;
+        System.out.println(name +" " + year + " " + address);;
+    }
+
+    public static void main(String[] args)
+    {
+        Employee E1= new Employee("Robert", 1994,"64C- Walls Street");
+        Employee E2= new Employee("Sam", 2000,"68D- Walls Street");
+        Employee E3= new Employee("John", 1999,"26B- Walls Street");
+        System.out.println("Name"  +  "Year of Joining"  +  "Address");
+    }
+
+}
+
+
+
+Q3.Write a program to print the names of students by creating a Student class. If no name is passed while creating an object 
+of Student class, then the name should be "Unknown", otherwise the name should be equal to the String value passed while 
+creating object of Student class. (Hint: Overloading concept)
+
+
+
+public class Student
+{
+    public Student()
+    {
+        System.out.println("name unknown");
+    }
+    public Student(String name)
+    {
+        System.out.println("Name is:" + name);
+    }
+
+    public static void main(String[] args)
+    {
+        Student s1= new Student("Paramjeet Singh");
+        Student s2= new Student();
+    }
+}
+
+
+
+Q4.Rectangle case.
+
+
+public class Rectangle 
+{
+
+    int length, breadth;
+
+    public Rectangle()
+    {
+        length = breadth =0;
+        System.out.println(area());
+    }
+    public Rectangle(int val)
+    {
+        length= breadth = val;
+        System.out.println(area());
+
+    }
+    public Rectangle(int length, int breadth)
+    {
+        this.length= length;
+        this.breadth= breadth;
+        System.out.println(area());
+    }
+    public int area()
+    {
+        int area = length*breadth;
+        return area;
+
+    }
+
+    public static void main(String[] args)
+    {
+        Rectangle p1= new Rectangle();
+        Rectangle p2= new Rectangle(25);
+        Rectangle p3= new Rectangle(15,20);
+    }
+}
+
+
+
+Q5.
+
+
+
+public class AddAmount {
+    static int amount = 50,count= 0;
+
+    public AddAmount()
+    {
+        count++;
+        System.out.println("Final amount:" + this.amount);
+
+    }
+    public AddAmount(int p)
+    {
+        this.amount= this.amount + amount;
+        count++;
+        System.out.println("Final amount:" + this.amount);
+    }
+    public static int printTransaction()
+    {
+        System.out.println("Transaction:");
+        return count;
+    }
+    public static void main(String[] args)
+    {
+        AddAmount p1= new AddAmount();
+        AddAmount p2= new AddAmount(20);
+        AddAmount p3= new AddAmount(100);
+        AddAmount p4= new AddAmount(30);
+        System.out.println(AddAmount.printTransaction());
+    }
+
+
+}
+
+
+Q6.Print programming language.
+
+
+
+public class Programming {
+    public Programming()
+    {
+        System.out.println("I love programming languages");
+    }
+    public Programming(String lang)
+    {
+        System.out.println("I love "  +  lang);
+    }
+    public static void main(String[] args)
+    {
+        Programming l1= new Programming();
+        Programming l2= new Programming("Java");
+        Programming l3= new Programming("python");
+    }
+}
+
+
+
+
